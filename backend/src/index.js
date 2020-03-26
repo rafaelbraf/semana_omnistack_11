@@ -1,0 +1,39 @@
+const express = require('express');
+const cors = require('cors');
+const routes = require('./routes');
+const app = express();
+
+app.use(cors());
+app.use(express.json());
+app.use(routes);
+
+/* ROTA / RECURSO */
+
+/* 
+METODOS HTTP
+    GET: BUSCAR UMA INFORMACAO DO BACK-END
+    POST: CRIAR UMA INFORMACAO NO BACK-END
+    PUT: ALTERAR UMA INFORMACAO NO BACK-END
+    DELETE: DELETAR UMA INFORMACAO NO BACK-END
+*/
+
+/*
+TIPOS DE PARAMETROS
+    QUERY PARAMS: PARAMETROS NOMEADOS ENVIADOS NA ROTA APOS O SIMBOLO DE INTERROGACAO
+    ROUTE PARAMS: PARAMETROS UTILIZADOS PARA IDENTIFICAR RECURSOS
+    REQUEST BODY: CORPO DA REQUISICAO UTILIZADO PARA CRIAR OU ALTERAR RECURSOS
+*/
+
+/**
+ * SQL: MYSQL, SQLITE, POSTGRESQL, ORACLE, MS SQL SERVER
+ * NOSQL: MONGODB, COUCHDB, ETC
+**/
+
+/**
+ * DRIVER: SELECT * FROM users
+ * QUERY BUILDER: table('users').select('*').where()
+ */
+
+
+
+app.listen(3333);
